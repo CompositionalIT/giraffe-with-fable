@@ -1,0 +1,18 @@
+{
+    "name": "app",
+    "type": "module",
+    "files": [
+        "./src/Server/dist"
+    ],
+    "main": "./dist/app.umd.cjs",
+    "module": "./dist/app.js",
+    "exports": {
+        ".": {
+            "import": "./dist/app.js",
+            "require": "./dist/app.umd.cjs"
+        }
+    },
+    "devDependencies": {
+        "vite": "^5.0.12"
+    }
+}
