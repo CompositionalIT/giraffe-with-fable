@@ -38,14 +38,14 @@ This folder contains a standard F# console application with the following modifi
 ### Server
 This folder contains a standard console application and uses **Giraffe.ViewEngine** to dynamically build HTML on the server. Key elements required for accessing the Fable-rendered JS are:
 
-#### 1. Serve up Fable-rendered JS
-```fsharp
-use_static "dist"
-```
-#### 2. Import Fable-rendered JS
-```fsharp
-head [] [ script [ _type "module"; _src "app.js" ] [] ]
-```
+1. Serve up Fable-rendered JS
+    ```fsharp
+    use_static "dist"
+    ```
+2. Import Fable-rendered JS
+    ```fsharp
+    head [] [ script [ _type "module"; _src "app.js" ] [] ]
+    ```
 
 ### Putting it all together - dev mode
 1. Build client assets and store results in Server static files folder:
